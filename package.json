@@ -1,0 +1,37 @@
+{
+  "name": "directus-extension-refresh-on-changed",
+  "description": "Directus interface to refresh the item when item is updated",
+  "icon": "extension",
+  "version": "1.0.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-interface"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "interface",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "12.1.4",
+    "typescript": "^5.7.2",
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "@directus/sdk": "^18.0.3",
+    "@directus/types": "^12.2.2",
+    "vue-i18n": "^10.0.5",
+    "vue-router": "^4.5.0"
+  }
+}
